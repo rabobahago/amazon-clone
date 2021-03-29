@@ -9,13 +9,14 @@ const Product = () => {
           <strong>12.99</strong>
         </p>
         <div className="product__rating">
-          <p>Star Here</p>
+          <p>🌟</p>
         </div>
       </div>
       <img
-        src="https://images-na.ssl-images-amazon.com/images/I/51Zymeq7UnL."
+        src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
         alt=""
       />
+      <button>Add to Basket</button>
     </div>
   )
 }
