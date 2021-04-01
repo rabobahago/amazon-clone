@@ -4,7 +4,7 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 import { Link } from 'react-router-dom'
 import { useStateValue } from './StateProvider'
 const Header = () => {
-  const [{ basket }, dispatch] = useStateValue()
+  const [{ basket }] = useStateValue()
   return (
     <div className="header">
       <Link to="/">
