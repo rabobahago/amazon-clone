@@ -3,16 +3,21 @@ import Header from './Header'
 import Home from './Home'
 import Checkout from './Checkout'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Login from './Login'
 const App = () => {
   return (
     <Router>
       <div className="App">
-        <Header />
         <Switch>
-          <Router path="/checkout">
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/checkout">
+            <Header />
             <Checkout />
-          </Router>
-          <Route path="/">
+          </Route>
+          <Route exact path="/">
+            <Header />
             <Home />
           </Route>
         </Switch>
