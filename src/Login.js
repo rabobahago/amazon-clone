@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
+import { auth } from './firebase'
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const signIn = (e) => {
     e.preventDefault()
+    // some firebase happened here
+  }
+  const register = (e) => {
+    e.preventDefault()
+    auth.createUserWithEmailAndPassword(email, password)
   }
   return (
     <div className="login">
@@ -45,7 +51,7 @@ const Login = () => {
           Sale. Please see our Privacy Notice, our Cookies Notice and our
           Interest-Based Ads Notice.
         </p>
-        <button className="login__registerButton">
+        <button onClick={register} className="login__registerButton">
           Create your Amazon Account
         </button>
       </div>
